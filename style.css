@@ -489,3 +489,46 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 /* Subtle section/card entrance without changing layout. */
 .case-study,.skill-card,.hobby-card,.cert-item,.edu-item,.contact-link{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease,background .35s ease}
 @media (prefers-reduced-motion:reduce){.reveal,.reveal-left{opacity:1!important;transform:none!important}.case-study,.skill-card,.hobby-card,.cert-item,.edu-item,.contact-link{transition:none!important}}
+
+
+/* =========================================================
+   ACADEMIC PROJECTS + CERTIFICATIONS ENHANCEMENT
+   Built on the existing portfolio styles; no layout framework changed.
+   ========================================================= */
+.projects-intro,.cert-intro{max-width:900px;color:#c8ced8;font-size:15px;line-height:1.85;margin:-.3rem 0 2.6rem}
+.projects-grid{gap:1.75rem}
+.project-wrap{position:relative;height:auto;min-height:315px;overflow:visible}
+.project-card-inner{height:100%;min-height:315px;position:relative;display:block;transform:none!important}
+.project-face{position:relative;inset:auto;min-height:0;height:auto;padding:1.65rem 1.7rem}
+.project-face.front{min-height:220px;border-bottom:1px solid rgba(128,188,255,.12)}
+.project-face.back{min-height:112px;justify-content:flex-start;padding-top:1.25rem;border-top:0;border-left:3px solid var(--azure);}
+.project-icon{width:48px;height:48px;display:grid;place-items:center;border:1px solid rgba(86,170,255,.32);background:rgba(86,170,255,.08);color:#68b4ff;margin-bottom:1.15rem;transition:transform .35s ease,background .35s ease,border-color .35s ease}
+.project-icon svg{width:25px;height:25px;display:block}
+.project-wrap:hover .project-icon{transform:translateY(-4px) rotate(-4deg);background:rgba(86,170,255,.15);border-color:rgba(86,170,255,.65)}
+.project-num{font-size:10px;letter-spacing:.16em;margin-bottom:.65rem}
+.project-title{font-size:1.08rem;font-weight:700;line-height:1.35;margin-bottom:.7rem}
+.project-obj{font-size:.88rem;line-height:1.7;color:#c4cbd6}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:1rem}
+.project-tags span{font:500 10px/1.2 'Space Mono',monospace;letter-spacing:.04em;color:#b9d9ff;border:1px solid rgba(86,170,255,.22);background:rgba(86,170,255,.06);padding:6px 8px}
+.project-outcome-label{font-size:9px;margin-bottom:.55rem}
+.project-outcome{font-size:.88rem;line-height:1.7;color:#cfeaff}
+.project-outcome strong{color:#fff;font-size:1.02em}
+.project-wrap.reveal{transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1),box-shadow .35s ease}
+.project-wrap.reveal.visible:hover{transform:translateY(-7px)!important}
+
+.cert-intro{margin-bottom:2.2rem}
+.cert-grid{grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.10)}
+.cert-item{min-height:150px;padding:1.45rem;display:flex;gap:1rem;align-items:flex-start;background:linear-gradient(145deg,#0d1015,#101722);border:1px solid transparent;position:relative;overflow:hidden}
+.cert-item::after{content:'';position:absolute;right:-35px;bottom:-45px;width:110px;height:110px;border-radius:50%;background:rgba(86,170,255,.05);transition:transform .45s ease,background .45s ease}
+.cert-item:hover{background:linear-gradient(145deg,#111720,#101b29);border-color:rgba(86,170,255,.5);transform:translateY(-5px);box-shadow:0 16px 34px rgba(0,0,0,.28);z-index:2}
+.cert-item:hover::after{transform:scale(1.35);background:rgba(86,170,255,.09)}
+.cert-icon{width:50px;height:50px;flex:0 0 50px;display:grid;place-items:center;color:#70baff;border:1px solid rgba(112,186,255,.35);background:rgba(112,186,255,.08);transition:transform .35s ease,box-shadow .35s ease}
+.cert-icon svg{width:26px;height:26px;display:block}
+.cert-item:hover .cert-icon{transform:rotate(5deg) scale(1.06);box-shadow:0 0 0 5px rgba(112,186,255,.06)}
+.cert-body{position:relative;z-index:1}
+.cert-name{font-size:1.06rem!important;font-weight:700;line-height:1.35;margin-bottom:.5rem!important;color:#f7f9ff!important}
+.cert-issuer{font-size:12px!important;line-height:1.5;letter-spacing:.03em;color:#70baff!important}
+.cert-year{font-size:11px!important;margin-top:.5rem;color:#aeb9c8!important;font-family:'Space Mono',monospace}
+@media(max-width:900px){.cert-grid{grid-template-columns:1fr 1fr}.project-wrap,.project-card-inner{min-height:0}.project-face.front{min-height:0}}
+@media(max-width:620px){.cert-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.project-face{padding:1.35rem}.project-icon{width:44px;height:44px}.cert-item{min-height:130px}}
+@media(prefers-reduced-motion:reduce){.project-wrap.reveal.visible:hover{transform:none!important}.project-icon,.cert-icon,.cert-item::after{transition:none!important}}
