@@ -449,3 +449,43 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .evidence-item > a:focus-visible { outline-offset: -4px; }
 @media(max-width: 700px) { .evidence-grid { grid-template-columns: 1fr; gap: 18px; } }
 @media print { .evidence-grid { display: block; } .evidence-item { break-inside: avoid; margin-bottom: 18px; } }
+
+/* =========================================================
+   REQUESTED UPDATE LAYER — 2026
+   Existing setup/layout retained.
+   ========================================================= */
+.inline-icon{width:15px;height:15px;fill:none;stroke:currentColor;flex:0 0 auto}
+.tiny-icon{width:14px;height:14px;fill:none;stroke:currentColor}
+
+/* Restore the existing reveal animation: the original file later forced
+   .reveal/.reveal-left to opacity:1, which disabled the animation. */
+.reveal,.reveal-left{opacity:0;transform:translateY(28px);animation:none}
+.reveal-left{transform:translateX(-28px)}
+.reveal.visible{opacity:1;transform:translateY(0);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+
+/* CSS-only fallback: content is still visible when JavaScript is unavailable. */
+@media (scripting: none){.reveal,.reveal-left{opacity:1!important;transform:none!important}}
+
+/* Stronger, less-dull Core Skills typography */
+#skills .section-title{margin-bottom:1.2rem}
+.skills-intro{max-width:760px;color:#c8ced8;font-size:15px;line-height:1.8;margin:-.2rem 0 2.5rem}
+.skill-card-title{font-size:18px!important;font-weight:700!important;letter-spacing:.01em!important;color:#f7f9ff!important}
+.skill-tag{font-size:12px!important;color:#d2d8e1!important;font-weight:500}
+.skill-card-icon{color:#56aaff!important}
+.skill-card:hover .skill-card-title{color:#fff!important}
+
+/* More precise experience hierarchy */
+.experience-intro{max-width:860px;color:#c5cbd5;font-size:15px;line-height:1.9;margin:-1.4rem 0 2.5rem}
+.exp-role{font-size:1.28rem!important;font-weight:600!important}
+.exp-points li{font-size:.95rem!important;color:#c7cdd7!important}
+.exp-highlight{font-weight:700!important}
+
+/* SVG icons inherit the existing colour system and animate cleanly. */
+.skill-card-icon svg,.hobby-icon svg,.contact-link-icon svg{display:block}
+.hobby-icon{transition:transform .35s ease,background .35s ease,border-color .35s ease}
+.hobby-card:hover .hobby-icon{transform:rotate(-6deg) scale(1.08)}
+
+/* Subtle section/card entrance without changing layout. */
+.case-study,.skill-card,.hobby-card,.cert-item,.edu-item,.contact-link{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease,background .35s ease}
+@media (prefers-reduced-motion:reduce){.reveal,.reveal-left{opacity:1!important;transform:none!important}.case-study,.skill-card,.hobby-card,.cert-item,.edu-item,.contact-link{transition:none!important}}
