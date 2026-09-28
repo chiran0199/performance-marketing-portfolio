@@ -6,6 +6,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Chirantan Dutta Banik | Performance Marketing &amp; Growth</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=DM+Sans:wght@300;400;500&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Professional display face for the hero name (requested update) -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&amp;display=swap" rel="stylesheet"/>
 <link href="./style.css" rel="stylesheet"/>
 <meta content="Performance marketing portfolio: Meta lead generation, Google Ads, campaign optimization and growth strategy. Explore results, methods and reporting context." name="description"/></head>
 <body>
@@ -43,8 +45,9 @@
 </defs></svg>
 <a class="skip-link" href="#case-studies">Skip to campaign case studies</a>
 <!-- ANIMATED BACKGROUND -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
 <nav>
-<span class="nav-logo">CDB.</span>
+<a class="nav-logo-link" href="#hero" aria-label="Chirantan Dutta Banik — home"><img alt="Chirantan Dutta Banik logo" class="nav-logo-img" src="./logo.png"/></a>
 <ul class="nav-links"><li><a href="#case-studies">Results</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
@@ -66,6 +69,7 @@
 </div>
 <div class="hero-right">
 <div class="hero-location"><svg class="inline-icon" aria-hidden="true"><use href="#i-pin"/></svg>Kolkata, West Bengal, India</div>
+<div class="hero-logo-badge" aria-hidden="true"><img alt="" class="hero-logo-img" loading="lazy" src="./logo.png"/></div>
 <div class="hero-stats"><div class="stat-item"><div class="stat-num">75.56%</div><div class="stat-label">Lower CPL · selected Meta ad comparison</div></div><div class="stat-item"><div class="stat-num">63.27%</div><div class="stat-label">Higher CTR · Escape Plan retargeting</div></div><div class="stat-item"><div class="stat-num">3.33×</div><div class="stat-label">ROAS · Escape Plan Zone A brand search</div></div><div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Google &amp; Meta campaigns audited</div></div></div>
 </div>
 </section>
@@ -158,17 +162,55 @@
 <div class="section-label reveal">Academic Projects</div>
 <h2 class="section-title reveal">From <em>Classroom</em> to Practical Marketing Problems</h2>
 <p class="projects-intro reveal">A selection of PGDM projects where I worked through the problem, research approach, strategic thinking and measurable or proposed outcomes. The figures below are retained from the supplied academic project document; targets are clearly marked as targets.</p>
+<div class="work-tabs reveal" role="tablist" aria-label="Academic projects and blog">
+<button aria-controls="projects-panel" aria-selected="true" class="work-tab active" id="tab-projects" onclick="switchWorkTab(this,'projects-panel')" role="tab" type="button">Academic Projects</button>
+<button aria-controls="blog-panel" aria-selected="false" class="work-tab" id="tab-blog" onclick="switchWorkTab(this,'blog-panel')" role="tab" type="button">Blog</button>
+</div>
+<div aria-labelledby="tab-projects" class="tab-panel active" id="projects-panel" role="tabpanel">
 <div class="projects-grid">
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-megaphone"/></svg></div><div class="project-num">Project 01 · Social Media Marketing</div><div class="project-title">Unleash Fitness — Campaign Strategy &amp; Execution</div><div class="project-obj">Built a social media marketing plan around audience analysis, competitor research and market trends. Developed content pillars, a content calendar and concepts for static posts, carousels and reels across Instagram and Facebook.</div><div class="project-tags"><span>Audience Analysis</span><span>Competitor Research</span><span>Content Strategy</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome"><strong>686,592</strong> Facebook reach in one week, with 72% men and 28% women. Cost per result was ₹1.51 for men and ₹1.18 for women; strong engagement was also observed on Instagram, particularly among 18–25 and 35–45 groups.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-gem"/></svg></div><div class="project-num">Project 02 · Marketing Analytics</div><div class="project-title">Bluestone — Social Listening &amp; Brand Analysis</div><div class="project-obj">Analysed Bluestone's social presence against competitors using social listening, with attention to brand mentions, audience engagement and sentiment. The project translated observed market signals into growth recommendations.</div><div class="project-tags"><span>Social Listening</span><span>Competitor Analysis</span><span>Engagement</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome"><strong>3,674</strong> mentions, 61.7% reported social share and 961,518 engagements. Recommendations included influencer partnerships, greater personalization and sustainability initiatives.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-store"/></svg></div><div class="project-num">Project 03 · Managing Online Stores</div><div class="project-title">Ashkev Health &amp; Beauty — D2C Marketing Strategy</div><div class="project-obj">Worked on positioning a coconut-based health and beauty brand and connecting product-level economics with digital marketing activity. The analysis covered product sales, profitability and Google campaign interactions.</div><div class="project-tags"><span>D2C Strategy</span><span>Product Analysis</span><span>Google Ads</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome">Coco Glow Face Serum reported ₹3,49,500 revenue from 699 units and ₹1,08,000 net profit. Performance Max recorded 12,791 impressions / 485 interactions; Search recorded 2,250 / 91.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-building"/></svg></div><div class="project-num">Project 04 · Sales &amp; Distribution</div><div class="project-title">Multi-Brand Distributor Health Analysis</div><div class="project-obj">Evaluated distributor health across Rite Bite Max Protein, Godrej Cosmetics, Continental Coffee and Naturals. The analysis focused on ROI, GMROI, sales, receivables, credit periods, margins and cash-flow health.</div><div class="project-tags"><span>ROI / GMROI</span><span>Margin Analysis</span><span>Distributor Health</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome">₹48.1L net investment, 16% annual ROI and ₹50L monthly sales with ₹66,000 net income. Product margins ranged from 15–35%; ₹30L receivables were reported with no pending company claims.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><div class="project-num">Project 05 · Brand Management &amp; Marcom</div><div class="project-title">Rahaat — Eco-Friendly Period Pamper Box</div><div class="project-obj">Developed a brand and marketing strategy for an eco-friendly period pamper box, combining market research, product curation and promotional planning around menstrual wellness, self-care and sustainability.</div><div class="project-tags"><span>Brand Strategy</span><span>Market Research</span><span>Marcom</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Created the brand identity and campaign direction with a clear value proposition aimed at millennial and Gen Z women, supported by research and product curation.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><div class="project-num">Project 06 · Design Thinking</div><div class="project-title">Narayana Health Care — Patient Experience</div><div class="project-obj">Applied design thinking to the appointment journey, focusing on reducing waiting friction, increasing online bookings and introducing virtual consultations for eligible cases.</div><div class="project-tags"><span>Journey Mapping</span><span>Service Design</span><span>KPI Framework</span></div></div><div class="project-face back"><div class="project-outcome-label">Proposed KPI targets</div><div class="project-outcome">The project defined targets of +20% online bookings, −15% average wait time, +10% patient satisfaction, virtual appointments for eligible cases and training for at least 80% of staff within one year.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-basket"/></svg></div><div class="project-num">Project 07 · Business Application</div><div class="project-title">Furniture Business — Excel Management Solution</div><div class="project-obj">Designed an Excel-based application concept to track consumer spending, employee-generated revenue and furniture-item sales while bringing inventory and customer behaviour into one management view.</div><div class="project-tags"><span>Excel</span><span>Business Analytics</span><span>Inventory</span></div></div><div class="project-face back"><div class="project-outcome-label">Expected project outcome</div><div class="project-outcome">The proposed solution aimed to improve visibility into financial performance and purchasing patterns, strengthen inventory management and increase employee accountability.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-layout"/></svg></div><div class="project-num">Project 08 · UI / UX</div><div class="project-title">Real Estate Website — Engagement-Focused Wireframe</div><div class="project-obj">Created a real-estate website wireframe focused on usability, navigation, visual hierarchy and conversion. The design incorporated clear CTAs and an enquiry form to make user interaction easier.</div><div class="project-tags"><span>Wireframing</span><span>Usability</span><span>Conversion Flow</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Addressed satisfaction, learnability, efficiency and accessibility while adding enquiry functionality to capture user needs and improve interaction.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-price"/></svg></div><div class="project-num">Project 09 · Category Management</div><div class="project-title">Decathlon — Category &amp; Pricing Strategy</div><div class="project-obj">Studied the customer journey across Decathlon's retail and online environments, examining product categorisation, pricing consistency, digital presentation and customer retention mechanisms.</div><div class="project-tags"><span>Category Management</span><span>Pricing</span><span>Customer Journey</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Identified intuitive product grouping, observed competitive pricing adjustments, compared online versus store experiences and evaluated personalization and community engagement for customer stickiness.</div></div></div></div>
-<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-icon"><svg aria-hidden="true"><use href="#i-marketing"/></svg></div><div class="project-num">Applied Strategy · NYX Client Planning</div><div class="project-title">IKONIC World — 10-Month Marketing Strategy</div><div class="project-obj">An applied strategy project included in the previous portfolio version. Built a 10-month growth roadmap around brand awareness, D2C sales, promotions, influencer activity, co-branding and competitive pricing.</div><div class="project-tags"><span>Growth Strategy</span><span>Media Planning</span><span>D2C</span></div></div><div class="project-face back"><div class="project-outcome-label">Planning deliverable</div><div class="project-outcome">₹10Cr planned budget with a full promotional, influencer, digital, co-branding and pricing framework. This is a strategy plan, not reported media spend delivered.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Fitness studio training session" loading="lazy" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-megaphone"/></svg></div><div class="project-num">Project 01 · Social Media Marketing</div><div class="project-title">Unleash Fitness — Campaign Strategy &amp; Execution</div><div class="project-obj">Built a social media marketing plan around audience analysis, competitor research and market trends. Developed content pillars, a content calendar and concepts for static posts, carousels and reels across Instagram and Facebook.</div><div class="project-tags"><span>Audience Analysis</span><span>Competitor Research</span><span>Content Strategy</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome"><strong>686,592</strong> Facebook reach in one week, with 72% men and 28% women. Cost per result was ₹1.51 for men and ₹1.18 for women; strong engagement was also observed on Instagram, particularly among 18–25 and 35–45 groups.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Fine jewellery display" loading="lazy" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-gem"/></svg></div><div class="project-num">Project 02 · Marketing Analytics</div><div class="project-title">Bluestone — Social Listening &amp; Brand Analysis</div><div class="project-obj">Analysed Bluestone's social presence against competitors using social listening, with attention to brand mentions, audience engagement and sentiment. The project translated observed market signals into growth recommendations.</div><div class="project-tags"><span>Social Listening</span><span>Competitor Analysis</span><span>Engagement</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome"><strong>3,674</strong> mentions, 61.7% reported social share and 961,518 engagements. Recommendations included influencer partnerships, greater personalization and sustainability initiatives.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Natural beauty and skincare products" loading="lazy" src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-store"/></svg></div><div class="project-num">Project 03 · Managing Online Stores</div><div class="project-title">Ashkev Health &amp; Beauty — D2C Marketing Strategy</div><div class="project-obj">Worked on positioning a coconut-based health and beauty brand and connecting product-level economics with digital marketing activity. The analysis covered product sales, profitability and Google campaign interactions.</div><div class="project-tags"><span>D2C Strategy</span><span>Product Analysis</span><span>Google Ads</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome">Coco Glow Face Serum reported ₹3,49,500 revenue from 699 units and ₹1,08,000 net profit. Performance Max recorded 12,791 impressions / 485 interactions; Search recorded 2,250 / 91.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Distribution warehouse and logistics" loading="lazy" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-building"/></svg></div><div class="project-num">Project 04 · Sales &amp; Distribution</div><div class="project-title">Multi-Brand Distributor Health Analysis</div><div class="project-obj">Evaluated distributor health across Rite Bite Max Protein, Godrej Cosmetics, Continental Coffee and Naturals. The analysis focused on ROI, GMROI, sales, receivables, credit periods, margins and cash-flow health.</div><div class="project-tags"><span>ROI / GMROI</span><span>Margin Analysis</span><span>Distributor Health</span></div></div><div class="project-face back"><div class="project-outcome-label">Reported academic outcome</div><div class="project-outcome">₹48.1L net investment, 16% annual ROI and ₹50L monthly sales with ₹66,000 net income. Product margins ranged from 15–35%; ₹30L receivables were reported with no pending company claims.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Eco-friendly sustainable packaging" loading="lazy" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><div class="project-num">Project 05 · Brand Management &amp; Marcom</div><div class="project-title">Rahaat — Eco-Friendly Period Pamper Box</div><div class="project-obj">Developed a brand and marketing strategy for an eco-friendly period pamper box, combining market research, product curation and promotional planning around menstrual wellness, self-care and sustainability.</div><div class="project-tags"><span>Brand Strategy</span><span>Market Research</span><span>Marcom</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Created the brand identity and campaign direction with a clear value proposition aimed at millennial and Gen Z women, supported by research and product curation.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Hospital patient care corridor" loading="lazy" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><div class="project-num">Project 06 · Design Thinking</div><div class="project-title">Narayana Health Care — Patient Experience</div><div class="project-obj">Applied design thinking to the appointment journey, focusing on reducing waiting friction, increasing online bookings and introducing virtual consultations for eligible cases.</div><div class="project-tags"><span>Journey Mapping</span><span>Service Design</span><span>KPI Framework</span></div></div><div class="project-face back"><div class="project-outcome-label">Proposed KPI targets</div><div class="project-outcome">The project defined targets of +20% online bookings, −15% average wait time, +10% patient satisfaction, virtual appointments for eligible cases and training for at least 80% of staff within one year.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Modern furniture showroom" loading="lazy" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-basket"/></svg></div><div class="project-num">Project 07 · Business Application</div><div class="project-title">Furniture Business — Excel Management Solution</div><div class="project-obj">Designed an Excel-based application concept to track consumer spending, employee-generated revenue and furniture-item sales while bringing inventory and customer behaviour into one management view.</div><div class="project-tags"><span>Excel</span><span>Business Analytics</span><span>Inventory</span></div></div><div class="project-face back"><div class="project-outcome-label">Expected project outcome</div><div class="project-outcome">The proposed solution aimed to improve visibility into financial performance and purchasing patterns, strengthen inventory management and increase employee accountability.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Real estate architecture exterior" loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-layout"/></svg></div><div class="project-num">Project 08 · UI / UX</div><div class="project-title">Real Estate Website — Engagement-Focused Wireframe</div><div class="project-obj">Created a real-estate website wireframe focused on usability, navigation, visual hierarchy and conversion. The design incorporated clear CTAs and an enquiry form to make user interaction easier.</div><div class="project-tags"><span>Wireframing</span><span>Usability</span><span>Conversion Flow</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Addressed satisfaction, learnability, efficiency and accessibility while adding enquiry functionality to capture user needs and improve interaction.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="Sports retail store aisle" loading="lazy" src="https://images.unsplash.com/photo-1547941126-3d5322b218b0?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-price"/></svg></div><div class="project-num">Project 09 · Category Management</div><div class="project-title">Decathlon — Category &amp; Pricing Strategy</div><div class="project-obj">Studied the customer journey across Decathlon's retail and online environments, examining product categorisation, pricing consistency, digital presentation and customer retention mechanisms.</div><div class="project-tags"><span>Category Management</span><span>Pricing</span><span>Customer Journey</span></div></div><div class="project-face back"><div class="project-outcome-label">Project outcome</div><div class="project-outcome">Identified intuitive product grouping, observed competitive pricing adjustments, compared online versus store experiences and evaluated personalization and community engagement for customer stickiness.</div></div></div></div>
+<div class="project-wrap reveal"><div class="project-card-inner"><div class="project-face front"><div class="project-thumb"><img alt="D2C fashion e-commerce styling" loading="lazy" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=700&h=420&fit=crop&auto=format"/></div><div class="project-icon"><svg aria-hidden="true"><use href="#i-marketing"/></svg></div><div class="project-num">Applied Strategy · NYX Client Planning</div><div class="project-title">IKONIC World — 10-Month Marketing Strategy</div><div class="project-obj">An applied strategy project included in the previous portfolio version. Built a 10-month growth roadmap around brand awareness, D2C sales, promotions, influencer activity, co-branding and competitive pricing.</div><div class="project-tags"><span>Growth Strategy</span><span>Media Planning</span><span>D2C</span></div></div><div class="project-face back"><div class="project-outcome-label">Planning deliverable</div><div class="project-outcome">₹10Cr planned budget with a full promotional, influencer, digital, co-branding and pricing framework. This is a strategy plan, not reported media spend delivered.</div></div></div></div>
+</div>
+</div>
+<div aria-labelledby="tab-blog" class="tab-panel" hidden="" id="blog-panel" role="tabpanel">
+<p class="blog-intro reveal">Notes on the campaign work above — written for the same reason the case studies are: to show how a decision got made, not just what the number was.</p>
+<div class="blog-grid">
+<article class="blog-card reveal">
+<div class="blog-img-wrap"><img alt="Meta Ads reporting dashboard with charts" loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&amp;h=420&amp;fit=crop&amp;auto=format"/><span class="blog-cat">Performance Marketing</span></div>
+<div class="blog-body">
+<div class="blog-meta"><span class="blog-date">Sep 2026</span><span class="blog-read">6 min read</span></div>
+<h3 class="blog-title">Reading a Meta ad report past the vanity metrics</h3>
+<p class="blog-excerpt">What the Krutanic account taught me about separating a genuine creative win from a delivery-window artefact — and why the ad name alone can't tell you if it's a static or a video.</p>
+<a class="blog-link" href="#krutanic"><svg aria-hidden="true" class="tiny-icon"><use href="#i-arrow"/></svg>Read the Krutanic case study</a>
+</div>
+</article>
+<article class="blog-card reveal">
+<div class="blog-img-wrap"><img alt="Luggage and travel retail product shelf" loading="lazy" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700&amp;h=420&amp;fit=crop&amp;auto=format"/><span class="blog-cat">Search Strategy</span></div>
+<div class="blog-body">
+<div class="blog-meta"><span class="blog-date">Aug 2026</span><span class="blog-read">7 min read</span></div>
+<h3 class="blog-title">Zone A, Zone B: structuring search around intent, not geography alone</h3>
+<p class="blog-excerpt">Splitting branded, generic and competitor intent into separate campaigns made the Escape Plan account easier to read — and easier to defend budget for.</p>
+<a class="blog-link" href="#escape-plan"><svg aria-hidden="true" class="tiny-icon"><use href="#i-arrow"/></svg>Read the Escape Plan case study</a>
+</div>
+</article>
+<article class="blog-card reveal">
+<div class="blog-img-wrap"><img alt="Cricket stadium under floodlights at night" loading="lazy" src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=700&amp;h=420&amp;fit=crop&amp;auto=format"/><span class="blog-cat">Media Planning</span></div>
+<div class="blog-body">
+<div class="blog-meta"><span class="blog-date">Jul 2026</span><span class="blog-read">5 min read</span></div>
+<h3 class="blog-title">Modelling an IPL burst: reach, frequency and the assumptions in between</h3>
+<p class="blog-excerpt">A six-city media plan is only as good as its assumptions. Here's how city allocation, cohort targeting and a same-day-uplift assumption fit together on paper.</p>
+<a class="blog-link" href="#ipl"><svg aria-hidden="true" class="tiny-icon"><use href="#i-arrow"/></svg>Read the IPL planning case study</a>
+</div>
+</article>
+</div>
 </div>
 </section>
 <!-- CERTIFICATIONS -->
@@ -203,9 +245,9 @@
 <div class="section-label reveal">Beyond Work</div>
 <h2 class="section-title reveal">Passions that <em>Drive Me</em></h2>
 <div class="hobbies-grid">
-<div class="hobby-card reveal"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-cricket"/></svg></span><div class="hobby-title">Cricket</div><p class="hobby-desc">A lifelong passion that taught me discipline, strategy, and how to perform under pressure — in the crease and in the boardroom.</p><span class="hobby-badge">CAB Under-17 Player</span></div>
-<div class="hobby-card reveal"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-bike"/></svg></span><div class="hobby-title">Bike Riding</div><p class="hobby-desc">Mountain trails, open highways, and high-altitude roads. Bike expeditions fuel my love for adventure and exploring the unknown.</p><span class="hobby-badge">Mountain Expedition Rider</span></div>
-<div class="hobby-card reveal"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-camera"/></svg></span><div class="hobby-title">Photography</div><p class="hobby-desc">Capturing the quiet drama of natural landscapes and fleeting moments — a detail-oriented eye that carries into every campaign I build.</p><span class="hobby-badge">Nature &amp; Travel Photography</span></div>
+<div class="hobby-card reveal"><img alt="Cricket batsman playing a shot" class="hobby-img" loading="lazy" src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=700&amp;h=600&amp;fit=crop&amp;auto=format"/><div class="hobby-overlay"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-cricket"/></svg></span><div class="hobby-title">Cricket</div><p class="hobby-desc">A lifelong passion that taught me discipline, strategy, and how to perform under pressure — in the crease and in the boardroom.</p><span class="hobby-badge">CAB Under-17 Player</span></div></div>
+<div class="hobby-card reveal"><img alt="Motorcyclist riding a mountain road" class="hobby-img" loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&amp;h=600&amp;fit=crop&amp;auto=format"/><div class="hobby-overlay"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-bike"/></svg></span><div class="hobby-title">Bike Riding</div><p class="hobby-desc">Mountain trails, open highways, and high-altitude roads. Bike expeditions fuel my love for adventure and exploring the unknown.</p><span class="hobby-badge">Mountain Expedition Rider</span></div></div>
+<div class="hobby-card reveal"><img alt="Camera photographing a natural landscape" class="hobby-img" loading="lazy" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=700&amp;h=600&amp;fit=crop&amp;auto=format"/><div class="hobby-overlay"><span class="hobby-icon"><svg aria-hidden="true"><use href="#i-camera"/></svg></span><div class="hobby-title">Photography</div><p class="hobby-desc">Capturing the quiet drama of natural landscapes and fleeting moments — a detail-oriented eye that carries into every campaign I build.</p><span class="hobby-badge">Nature &amp; Travel Photography</span></div></div>
 </div>
 </section>
 <!-- CONTACT -->
@@ -235,6 +277,134 @@
     entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target);}});
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   items.forEach((el,i)=>{el.style.setProperty('--delay',String(Math.min(i*45,450)));observer.observe(el);});
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     REQUESTED ANIMATION LAYER — added on top of the existing
+     reveal script above without altering it. Every effect here
+     checks prefers-reduced-motion and turns itself off for
+     anyone who has that setting on, matching the a11y approach
+     already used elsewhere on this page.
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+/* Tab switcher for the Academic Projects / Blog panel (global — used by inline onclick) */
+function switchWorkTab(btn, panelId){
+  const bar = btn.closest('.work-tabs');
+  if(bar){
+    bar.querySelectorAll('.work-tab').forEach(function(t){
+      t.classList.remove('active');
+      t.setAttribute('aria-selected','false');
+    });
+  }
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  document.querySelectorAll('.tab-panel').forEach(function(p){
+    const on = p.id === panelId;
+    p.hidden = !on;
+    p.classList.toggle('active', on);
+  });
+}
+
+var REDUCE_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* 1. Ambient particle network behind the whole page (canvas already reserved in CSS) */
+(function(){
+  if(REDUCE_MOTION) return;
+  var cv = document.getElementById('bg-canvas');
+  if(!cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d'), W, H, P = [];
+  var N = 60, COLORS = ['#eb0d0d', '#0080FE', 'rgba(255,255,255,0.55)'];
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+  function resize(){ W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
+  function init(){
+    P = [];
+    for(var i=0;i<N;i++){
+      P.push({x:rnd(0,W), y:rnd(0,H), vx:rnd(-0.22,0.22), vy:rnd(-0.22,0.22), r:rnd(0.8,2), c:COLORS[i%COLORS.length], a:rnd(0.15,0.55)});
+    }
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<N;i++){
+      for(var j=i+1;j<N;j++){
+        var dx=P[i].x-P[j].x, dy=P[i].y-P[j].y, d=Math.sqrt(dx*dx+dy*dy);
+        if(d<125){
+          ctx.beginPath();
+          ctx.strokeStyle = 'rgba(0,128,254,' + ((1-d/125)*0.14) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.moveTo(P[i].x,P[i].y); ctx.lineTo(P[j].x,P[j].y); ctx.stroke();
+        }
+      }
+    }
+    P.forEach(function(p){
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = p.c; ctx.globalAlpha = p.a; ctx.fill(); ctx.globalAlpha = 1;
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0||p.x>W) p.vx*=-1;
+      if(p.y<0||p.y>H) p.vy*=-1;
+    });
+    requestAnimationFrame(frame);
+  }
+  window.addEventListener('resize', function(){ resize(); init(); });
+  resize(); init(); frame();
+})();
+
+/* 2. Magnetic pull on the two hero buttons */
+(function(){
+  if(REDUCE_MOTION) return;
+  document.querySelectorAll('.btn-primary, .btn-outline').forEach(function(btn){
+    btn.addEventListener('mousemove', function(e){
+      var r = btn.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width/2) * 0.25;
+      var dy = (e.clientY - r.top - r.height/2) * 0.25;
+      btn.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+    });
+    btn.addEventListener('mouseleave', function(){ btn.style.transform = ''; });
+  });
+})();
+
+/* 3. 3D tilt on skill cards (CSS already sets perspective/preserve-3d for these) */
+(function(){
+  if(REDUCE_MOTION) return;
+  document.querySelectorAll('.skill-card').forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width/2) / (r.width/2);
+      var dy = (e.clientY - r.top - r.height/2) / (r.height/2);
+      card.style.transform = 'rotateY(' + (dx*10) + 'deg) rotateX(' + (-dy*10) + 'deg)';
+    });
+    card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+  });
+})();
+
+/* 4. Hobby-card image parallax + tilt on hover */
+(function(){
+  if(REDUCE_MOTION) return;
+  document.querySelectorAll('.hobby-card').forEach(function(card){
+    var img = card.querySelector('.hobby-img');
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width/2) / (r.width/2);
+      var dy = (e.clientY - r.top - r.height/2) / (r.height/2);
+      card.style.transform = 'rotateY(' + (dx*4) + 'deg) rotateX(' + (-dy*3) + 'deg)';
+      if(img) img.style.transform = 'scale(1.1) translate(' + (dx*8) + 'px,' + (dy*5) + 'px)';
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.transform = '';
+      if(img) img.style.transform = '';
+    });
+  });
+})();
+
+/* 5. Occasional subtle glitch flicker on the hero name */
+(function(){
+  if(REDUCE_MOTION) return;
+  var name = document.querySelector('.hero-name');
+  if(!name) return;
+  setInterval(function(){
+    name.style.textShadow = ((Math.random()-0.5)*5) + 'px 0 #eb0d0d,' + ((Math.random()-0.5)*5) + 'px 0 #0080FE';
+    setTimeout(function(){ name.style.textShadow = ''; }, 110);
+  }, 4200);
 })();
 </script>
 </body>
