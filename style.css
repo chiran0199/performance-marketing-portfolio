@@ -663,3 +663,19 @@ nav { position: sticky; top: 0; }
   nav { position: relative; }
   #hero { min-height: auto; }
 }
+
+/* Certificate gallery */
+.credential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.credential-card{min-width:0;overflow:hidden;border:1px solid #303b4a;border-radius:10px;background:#10151c;display:flex;flex-direction:column}
+.credential-preview{display:block;background:#fff;padding:8px;border-bottom:1px solid #303b4a}
+.credential-preview img{display:block;width:100%;height:auto;aspect-ratio:1056/816;object-fit:contain}
+.credential-content{display:flex;flex-direction:column;flex:1;padding:22px}
+.credential-content h3{font-size:17px;line-height:1.5;margin:0 0 12px;color:#edf2ff}
+.credential-issuer{font-size:13px;line-height:1.6;color:#70baff;margin:0 0 10px}
+.credential-date{font-size:12px;line-height:1.6;color:#aeb9c8;margin:0 0 22px}
+.credential-open{margin-top:auto;align-self:flex-start;color:#edf2ff;font-size:13px;text-underline-offset:5px;padding:8px 0}
+.credential-preview:hover{filter:brightness(.96)}
+.credential-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:1000px){.credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.credential-grid{grid-template-columns:1fr}.credential-content{padding:18px}}
+@media print{.credential-card{break-inside:avoid}}
