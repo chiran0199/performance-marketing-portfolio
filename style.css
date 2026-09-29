@@ -451,7 +451,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 @media print { .evidence-grid { display: block; } .evidence-item { break-inside: avoid; margin-bottom: 18px; } }
 
 /* =========================================================
-   REQUESTED UPDATE LAYER — 2026
+   REQUESTED UPDATE LAYER - 2026
    Existing setup/layout retained.
    ========================================================= */
 .inline-icon{width:15px;height:15px;fill:none;stroke:currentColor;flex:0 0 auto}
@@ -534,8 +534,8 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 @media(prefers-reduced-motion:reduce){.project-wrap.reveal.visible:hover{transform:none!important}.project-icon,.cert-icon,.cert-item::after{transition:none!important}}
 
 /* =========================================================
-   UPDATE (v2) — LOGO, BLOG TAB, PROJECT IMAGES, HERO TYPEFACE
-   Appended only — nothing above this block was edited or
+   UPDATE (v2) - LOGO, BLOG TAB, PROJECT IMAGES, HERO TYPEFACE
+   Appended only - nothing above this block was edited or
    removed, so the rest of the site keeps working as before.
 
    v2 fixes issues reported in the v1 pass:
@@ -545,7 +545,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
      The same hard caps are also written directly onto the
      <img> tag in index.html, so the size holds even if this
      CSS file fails to load at all.
-   - The floating hero-badge copy of the logo was removed —
+   - The floating hero-badge copy of the logo was removed -
      it wasn't asked for and was extra risk; the logo now
      appears once, in the nav.
    - Project thumbnails get the same hard size caps, plus a
@@ -557,7 +557,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
      the original icon-only layout with no CSS override.
    ========================================================= */
 
-/* ── Logo (nav only) — hard-capped, cannot balloon ── */
+/* ── Logo (nav only) - hard-capped, cannot balloon ── */
 .nav-logo-link{display:flex;align-items:center;line-height:0}
 .nav-logo-img{
   width:46px!important;height:46px!important;
@@ -599,7 +599,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .blog-link .tiny-icon{width:12px;height:12px}
 @media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
 
-/* ── Project thumbnail image — hard-capped + always-visible animation ── */
+/* ── Project thumbnail image - hard-capped + always-visible animation ── */
 .project-thumb{
   width:calc(100% + 3.4rem)!important;height:150px!important;max-height:150px!important;
   margin:-1.65rem -1.7rem 1.1rem;overflow:hidden!important;position:relative;display:block;
@@ -613,7 +613,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .project-wrap:hover .project-thumb img{transform:scale(1.07);filter:grayscale(0%) brightness(.85)}
 .project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.96) 0%,rgba(10,10,10,.15) 65%,transparent 100%);pointer-events:none}
 
-/* Always-on light sweep across each thumbnail — visible without hovering */
+/* Always-on light sweep across each thumbnail - visible without hovering */
 .project-thumb::before{
   content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;
   background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.14) 45%,rgba(0,128,254,.24) 55%,transparent 100%);
@@ -625,7 +625,7 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .projects-grid .project-wrap:nth-child(4n) .project-thumb::before{animation-delay:4.5s}
 @keyframes thumbShine{0%,10%{left:-60%}55%,100%{left:130%}}
 
-/* Slow breathing glow on each card — visible without hovering */
+/* Slow breathing glow on each card - visible without hovering */
 .project-face.front{animation:cardGlow 7s ease-in-out infinite}
 .projects-grid .project-wrap:nth-child(2n) .project-face.front{animation-delay:2.3s}
 .projects-grid .project-wrap:nth-child(3n) .project-face.front{animation-delay:4.6s}
@@ -653,3 +653,13 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .concept-grid .evidence-item:first-child{grid-column:auto}
 .concept-grid .evidence-item img{aspect-ratio:16/10;object-fit:cover;object-position:top}
 @media(max-width:700px){.nav-logo-img{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important}}
+
+/* Keep the navigation in normal flow so it cannot cover the hero. */
+nav { position: sticky; top: 0; }
+#hero { min-height: calc(100svh - 105px); }
+.hero-location { display: flex; align-items: center; gap: 8px; line-height: 1.6; margin-bottom: 32px; }
+.hero-location::before { content: none; }
+@media (max-width: 900px) {
+  nav { position: relative; }
+  #hero { min-height: auto; }
+}
