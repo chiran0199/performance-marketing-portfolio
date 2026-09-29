@@ -534,23 +534,41 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 @media(prefers-reduced-motion:reduce){.project-wrap.reveal.visible:hover{transform:none!important}.project-icon,.cert-icon,.cert-item::after{transition:none!important}}
 
 /* =========================================================
-   REQUESTED UPDATE — LOGO, BLOG TAB, PROJECT IMAGES,
-   HOBBY IMAGES, HERO TYPEFACE, EXTRA MOTION
+   UPDATE (v2) — LOGO, BLOG TAB, PROJECT IMAGES, HERO TYPEFACE
    Appended only — nothing above this block was edited or
-   removed, so the current site keeps working exactly as before.
+   removed, so the rest of the site keeps working as before.
+
+   v2 fixes issues reported in the v1 pass:
+   - Logo is now hard-capped in size (width/height + !important
+     max-width/max-height) so it cannot render at native pixel
+     size even if a stale/cached stylesheet is ever served.
+     The same hard caps are also written directly onto the
+     <img> tag in index.html, so the size holds even if this
+     CSS file fails to load at all.
+   - The floating hero-badge copy of the logo was removed —
+     it wasn't asked for and was extra risk; the logo now
+     appears once, in the nav.
+   - Project thumbnails get the same hard size caps, plus a
+     visible always-on animation (a light sweep + a slow glow
+     pulse) instead of a hover-only effect, so it reads as
+     "animated" on first glance, not just on mouseover.
+   - The hobby-card image treatment from v1 has been fully
+     removed at the user's request; hobby cards are back to
+     the original icon-only layout with no CSS override.
    ========================================================= */
 
-/* ── Logo (nav + hero) ── */
+/* ── Logo (nav only) — hard-capped, cannot balloon ── */
 .nav-logo-link{display:flex;align-items:center;line-height:0}
-.nav-logo-img{height:46px;width:46px;object-fit:contain;border-radius:50%;transition:transform .35s ease,filter .35s ease;filter:drop-shadow(0 0 6px rgba(235,13,13,.35))}
+.nav-logo-img{
+  width:46px!important;height:46px!important;
+  max-width:46px!important;max-height:46px!important;
+  object-fit:contain;border-radius:50%;display:block;
+  transition:transform .35s ease,filter .35s ease;
+  filter:drop-shadow(0 0 6px rgba(235,13,13,.35));
+}
 .nav-logo-link:hover .nav-logo-img{transform:rotate(8deg) scale(1.08);filter:drop-shadow(0 0 10px rgba(0,128,254,.45))}
-.hero-logo-badge{display:flex;justify-content:center;margin:1.5rem 0}
-.hero-logo-img{width:150px;height:150px;object-fit:contain;border-radius:50%;animation:logoFloat 5s ease-in-out infinite;filter:drop-shadow(0 0 22px rgba(235,13,13,.28)) drop-shadow(0 0 42px rgba(0,128,254,.22))}
-@keyframes logoFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
-@media(max-width:900px){.hero-logo-badge{margin:1rem 0}.hero-logo-img{width:110px;height:110px}}
-@media(prefers-reduced-motion:reduce){.hero-logo-img{animation:none}}
 
-/* ── Hero name: more professional display face (requested) ── */
+/* ── Hero name: more professional display face ── */
 .hero-name{font-family:'Fraunces','Playfair Display',serif;font-weight:600;letter-spacing:-0.01em}
 .hero-name span{font-weight:600}
 
@@ -581,27 +599,48 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 .blog-link .tiny-icon{width:12px;height:12px}
 @media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
 
-/* ── Project thumbnail image (bleeds to the card edges) ── */
-.project-thumb{width:calc(100% + 3.4rem);height:150px;margin:-1.65rem -1.7rem 1.1rem;overflow:hidden;position:relative}
-.project-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(35%) brightness(.72);transition:transform .6s cubic-bezier(.22,1,.36,1),filter .4s ease}
+/* ── Project thumbnail image — hard-capped + always-visible animation ── */
+.project-thumb{
+  width:calc(100% + 3.4rem)!important;height:150px!important;max-height:150px!important;
+  margin:-1.65rem -1.7rem 1.1rem;overflow:hidden!important;position:relative;display:block;
+}
+.project-thumb img{
+  width:100%!important;height:100%!important;max-width:100%!important;
+  object-fit:cover;display:block;
+  filter:grayscale(35%) brightness(.72);
+  transition:transform .6s cubic-bezier(.22,1,.36,1),filter .4s ease;
+}
 .project-wrap:hover .project-thumb img{transform:scale(1.07);filter:grayscale(0%) brightness(.85)}
-.project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.96) 0%,rgba(10,10,10,.15) 65%,transparent 100%)}
-.project-wrap:hover{box-shadow:0 18px 40px rgba(0,128,254,.14)}
-@media(max-width:620px){.project-thumb{height:130px}}
-@media(prefers-reduced-motion:reduce){.project-thumb img{transition:none}}
+.project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.96) 0%,rgba(10,10,10,.15) 65%,transparent 100%);pointer-events:none}
 
-/* ── Hobbies: photographic cards instead of icon-only cards (requested) ── */
-.hobby-card{padding:0;text-align:left;position:relative;overflow:hidden;height:380px}
-.hobby-img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:grayscale(55%) brightness(.55);transition:transform .7s cubic-bezier(.22,1,.36,1),filter .4s ease}
-.hobby-card:hover .hobby-img{filter:grayscale(0%) brightness(.62)}
-.hobby-overlay{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:1.85rem;background:linear-gradient(to top,rgba(10,10,10,.96) 15%,rgba(10,10,10,.35) 60%,transparent 100%)}
-.hobby-overlay .hobby-icon{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border:1px solid rgba(235,13,13,.4);background:rgba(235,13,13,.12);margin-bottom:.9rem;color:var(--red)}
-.hobby-overlay .hobby-icon svg{width:19px;height:19px}
-@media(max-width:900px){.hobby-card{height:320px}}
-@media(prefers-reduced-motion:reduce){.hobby-img{transition:none}}
+/* Always-on light sweep across each thumbnail — visible without hovering */
+.project-thumb::before{
+  content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.14) 45%,rgba(0,128,254,.24) 55%,transparent 100%);
+  transform:skewX(-18deg);pointer-events:none;z-index:1;
+  animation:thumbShine 6s ease-in-out infinite;
+}
+.projects-grid .project-wrap:nth-child(2n) .project-thumb::before{animation-delay:1.5s}
+.projects-grid .project-wrap:nth-child(3n) .project-thumb::before{animation-delay:3s}
+.projects-grid .project-wrap:nth-child(4n) .project-thumb::before{animation-delay:4.5s}
+@keyframes thumbShine{0%,10%{left:-60%}55%,100%{left:130%}}
 
-/* ── Skill-card / hobby-card JS tilt needs a transform origin + smoothing ── */
-.skill-card,.hobby-card{transition:transform .15s ease-out,box-shadow .3s ease,border-color .3s ease}
+/* Slow breathing glow on each card — visible without hovering */
+.project-face.front{animation:cardGlow 7s ease-in-out infinite}
+.projects-grid .project-wrap:nth-child(2n) .project-face.front{animation-delay:2.3s}
+.projects-grid .project-wrap:nth-child(3n) .project-face.front{animation-delay:4.6s}
+@keyframes cardGlow{0%,100%{box-shadow:0 0 0 rgba(235,13,13,0)}50%{box-shadow:0 14px 30px rgba(0,128,254,.13)}}
+
+.project-wrap:hover{box-shadow:0 18px 40px rgba(0,128,254,.16)}
+@media(max-width:620px){.project-thumb{height:130px!important;max-height:130px!important}}
+@media(prefers-reduced-motion:reduce){
+  .project-thumb img{transition:none}
+  .project-thumb::before{animation:none;display:none}
+  .project-face.front{animation:none}
+}
+
+/* ── Skill-card JS tilt needs a smoothing transition ── */
+.skill-card{transition:transform .15s ease-out,box-shadow .3s ease,border-color .3s ease}
 
 /* ── Buttons: smoother return after the magnetic-hover script releases them ── */
 .btn-primary,.btn-outline{transition:transform .2s ease,box-shadow .25s ease,border-color .25s ease,color .25s ease}
