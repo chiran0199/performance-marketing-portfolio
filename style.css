@@ -644,3 +644,12 @@ thead {background:#1c2634;} tbody th {font-weight:400;color:#c2c5cc;}
 
 /* ── Buttons: smoother return after the magnetic-hover script releases them ── */
 .btn-primary,.btn-outline{transition:transform .2s ease,box-shadow .25s ease,border-color .25s ease,color .25s ease}
+
+/* Supplied logo and illustrative report gallery */
+.nav-logo-img{width:64px!important;height:64px!important;max-width:64px!important;max-height:64px!important;border-radius:5px!important;object-fit:contain}
+.concept-details{margin-top:28px;border:1px solid #303b4a;border-radius:10px;padding:18px 22px;background:#10151c}
+.concept-details summary{cursor:pointer;color:#eef2ff;font-size:15px;font-weight:600}
+.concept-details summary:focus-visible{outline:3px solid #80bcff;outline-offset:4px}
+.concept-grid .evidence-item:first-child{grid-column:auto}
+.concept-grid .evidence-item img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+@media(max-width:700px){.nav-logo-img{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important}}
