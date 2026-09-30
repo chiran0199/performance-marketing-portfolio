@@ -1,5 +1,7 @@
-import { asset } from "../lib/asset.js";
+import { useRef } from "react";
+import TimelineControls from "./TimelineControls.jsx";
 export default function Experience() {
+  const track = useRef(null);
   return (
     <section id="experience">
       <div className="section-label reveal">{"Experience"}</div>
@@ -12,7 +14,8 @@ export default function Experience() {
           "My experience sits across two connected sides of marketing: performance and growth work on one side, and direct commercial ownership on the other. The timeline below separates the role, the work handled, the tools involved and the measurable outcomes recorded in the supplied material."
         }
       </p>
-      <div className="exp-list">
+      <TimelineControls track={track} />
+      <div className="exp-list" ref={track} tabIndex="0" role="region" aria-label="Career milestones, scroll horizontally to explore">
         <div className="exp-item reveal">
           <div className="exp-meta">
             <div className="exp-period">

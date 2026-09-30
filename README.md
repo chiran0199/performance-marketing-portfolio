@@ -1,6 +1,14 @@
-# Chirantan Dutta Banik: React portfolio
+# Chirantan Dutta Banik: animated React portfolio
 
 This is the React version of https://chiran0199.github.io/performance-marketing-portfolio/ captured for this migration. All existing copy, reporting context, certificate images, campaign dashboards and evidence images are retained. The skills section has six warm black-and-gold panels, inspired by the supplied screenshot. All 32 original skill labels are retained.
+
+## Motion edition
+
+See [UPDATE-GUIDE.md](UPDATE-GUIDE.md) for the existing-repository upload steps.
+
+This edition adds a GSAP motion system: a typed hero title, layered scroll parallax, staggered achievement entrances, scroll reveals, animated comparison bars, pointer-responsive cards, magnetic buttons, a sliding navigation underline and a reading-progress indicator. The career section uses a native horizontal timeline with arrows and milestone controls. Dashboards and certificate thumbnails open in a keyboard-accessible full-screen viewer. A pause button and reduced-motion support keep the page usable without animation.
+
+The source content and original image files are unchanged. Motion styling lives in `src/styles/motion.css`; animations are coordinated in `src/hooks/usePortfolioMotion.js`.
 
 ## Project contents
 
@@ -45,7 +53,7 @@ Run `npm run verify` to repeat the migration checks. The baseline is the capture
 ## Publish the source project to your current GitHub repository
 
 1. Back up the repository first with Code > Download ZIP.
-2. Extract `chirantan-react-source.zip` and open its project folder.
+2. Extract `chirantan-portfolio-motion-source.zip` and open its project folder.
 3. In the `performance-marketing-portfolio` repository, upload the project contents at the repository root. Preserve the `src`, `public`, and `.github` folders and upload `package.json`, `package-lock.json`, `vite.config.js`, and `index.html` alongside them. Do not upload `node_modules`.
 4. Confirm that `.github/workflows/deploy.yml` appears in GitHub. If your file picker skips the dot-prefixed folder, use Add file > Create new file, enter `.github/workflows/deploy.yml`, and paste the supplied workflow contents.
 5. In Settings > Pages, change Source to **GitHub Actions**. This replaces the earlier "Deploy from a branch" setting for this source-project route.
@@ -55,10 +63,6 @@ Run `npm run verify` to repeat the migration checks. The baseline is the capture
 The configured base path is `/performance-marketing-portfolio/`. Change `base` in `vite.config.js` if you rename the repository. Vite's current official Pages guide is https://vite.dev/guide/static-deploy#github-pages.
 
 The project is prepared locally; this package does not mean the live repository has been updated.
-
-## Alternative: publish the already-built files
-
-The separate `chirantan-react-ready-to-upload.zip` contains a compiled React website. Extract it and upload its `index.html`, `.nojekyll`, and entire `assets` folder at the repository root. For this route keep Pages set to **Deploy from a branch > main > / (root)**. The compiled site works at your current repository URL, but future content edits should be made in the source project and rebuilt. Choose one deployment route at a time.
 
 ## Monthly updates
 
@@ -80,4 +84,4 @@ The example directory tree in the request includes WebGL scenes from a different
 
 ## Verification performed
 
-The production build passes. The migration check compares all text against the captured source, matches all 44 image elements, checks the hashes of 31 local image files, and exercises the project/blog tabs with mouse and keyboard events. The layout includes desktop, tablet and mobile breakpoints. The cloud browser blocked local preview access, so a visual browser review is still recommended before publishing.
+The production build passes. The migration check compares all text against the captured source, matches all 44 image elements, checks the hashes of 31 local image files, and exercises the project/blog tabs with mouse and keyboard events. The layout includes desktop, tablet and mobile breakpoints. The motion edition was additionally checked in headless Chromium at desktop, tablet and phone widths. Image viewing, keyboard dismissal, timeline movement, motion pause and reduced-motion behavior were exercised. External fonts and photographs retain their original host dependencies.

@@ -18,6 +18,9 @@ import Hobbies from "./components/Hobbies.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
+import ImageViewer from "./components/ImageViewer.jsx";
+import MotionControls from "./components/MotionControls.jsx";
+
 export default function App() {
   usePortfolioMotion();
   return (
@@ -40,6 +43,9 @@ export default function App() {
       <Hobbies />
       <Contact />
       <Footer />
+      <ImageViewer />
+      <MotionControls />
+      <div className="reading-progress" aria-hidden="true" />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { asset } from "../lib/asset.js";
 export default function Hero() {
   return (
     <section id="hero" style={{ padding: "0", border: "none" }}>
+      <div className="hero-atmosphere" aria-hidden="true"><div className="hero-halo halo-blue"/><div className="hero-halo halo-red"/><div className="hero-grid"/><div className="hero-orbits"><i/><i/><i/><b/></div></div>
       <div className="hero-left">
         <div className="hero-tag">
           {"Performance Marketing & Growth Specialist"}

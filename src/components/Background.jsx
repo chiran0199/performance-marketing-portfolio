@@ -60,18 +60,20 @@ export default function Background() {
     function sync() {
       cancelAnimationFrame(frameId);
       ctx.clearRect(0, 0, width, height);
-      if (!preference.matches && !document.hidden) draw();
+      if (!preference.matches && !document.hidden && document.documentElement.dataset.motion !== "paused") draw();
     }
     resize();
     sync();
     window.addEventListener("resize", resize);
     document.addEventListener("visibilitychange", sync);
     preference.addEventListener("change", sync);
+    window.addEventListener("portfolio-motion", sync);
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener("resize", resize);
       document.removeEventListener("visibilitychange", sync);
       preference.removeEventListener("change", sync);
+      window.removeEventListener("portfolio-motion", sync);
     };
   }, []);
   return <canvas id="bg-canvas" ref={canvas} aria-hidden="true" />;
